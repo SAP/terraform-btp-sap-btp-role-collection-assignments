@@ -154,21 +154,3 @@ No modules.
 | <a name="output_assignments_by_user_count"></a> [assignments\_by\_user\_count](#output\_assignments\_by\_user\_count) | The number of role collection assignments that have been made using the user attribute. |
 | <a name="output_assignments_by_user_keys"></a> [assignments\_by\_user\_keys](#output\_assignments\_by\_user\_keys) | The list of keys identifying each role collection assignment that have been made using the user attribute. |
 <!-- END_TF_DOCS -->
-
-## Contributing
-
-Contributions are welcome. Please run the following checks before submitting a pull request:
-
-```bash
-terraform fmt -recursive
-terraform validate
-terraform test
-```
-
-## Code of Conduct
-
-Members, contributors, and leaders pledge to make participation in our community a harassment-free experience. By participating in this project, you agree to always abide by its [Code of Conduct](https://github.com/SAP/.github/blob/main/CODE_OF_CONDUCT.md).
-
-## Licensing
-
-Copyright 2026 SAP SE or an SAP affiliate company and `terraform-btp-role-collections` contributors. See our [LICENSE](LICENSE) for copyright and license information. Detailed information, including third-party components and their licensing/copyright information, is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/terraform-btp-role-collections).
