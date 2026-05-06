@@ -1,5 +1,5 @@
 #https://github.com/terraform-docs/terraform-docs/tree/master?tab=readme-ov-file#configuration
-formatter: "" # this is required
+formatter: "markdown table" # this is required
 
 version: ""
 
