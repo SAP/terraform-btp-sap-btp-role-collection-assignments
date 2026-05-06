@@ -1,0 +1,43 @@
+# Terraform Document Generation Check
+name: Terraform Document Generation Check
+
+# This GitHub action will run on pull requests and pushes on main branch.
+# It will generate Terraform mudule documentation and check if there are any changes. 
+# If there are changes, it will fail the action and ask the contributor to update the documentation.
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  workflow_call:
+
+# Testing only needs permissions to read the repository contents.
+permissions:
+  contents: read
+
+jobs:
+  terraform-docu-check:
+    name: Check if Terraform documentation is up to date
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_wrapper: false
+
+      #https://github.com/terraform-docs/gh-actions
+      - name: Render terraform docs inside the README.md and push changes back to PR branch
+        uses: terraform-docs/gh-actions@v1.4.1
+        with:
+          working-dir: .
+          output-file: README.md
+          config-file: .terraform-docs.yml
+          fail-on-diff: true

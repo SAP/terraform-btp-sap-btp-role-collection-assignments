@@ -1,0 +1,6 @@
+# Example terraform.tfvars file
+# Copy this file to terraform.tfvars and update the values
+
+# subaccount_name = "my-subaccount"
+# subdomain       = "my-subdomain"
+# region          = "us10"
