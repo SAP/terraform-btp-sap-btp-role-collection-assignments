@@ -5,13 +5,16 @@ name: Terraform Test
 # If there are any errors, it will fail the action and ask the contributor to fix the errors.
 
 on:
-    pull_request:
-      types:
-        - opened
-        - reopened
-        - synchronize
-        - ready_for_review
-    workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   terraform-test:
