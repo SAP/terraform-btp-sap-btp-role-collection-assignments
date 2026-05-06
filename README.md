@@ -165,6 +165,10 @@ terraform validate
 terraform test
 ```
 
-## License
+## Code of Conduct
 
-Apache License 2.0 — see [LICENSE](LICENSE) for details.
+Members, contributors, and leaders pledge to make participation in our community a harassment-free experience. By participating in this project, you agree to always abide by its [Code of Conduct](https://github.com/SAP/.github/blob/main/CODE_OF_CONDUCT.md).
+
+## Licensing
+
+Copyright 2026 SAP SE or an SAP affiliate company and `terraform-btp-role-collections` contributors. See our [LICENSE](LICENSE) for copyright and license information. Detailed information, including third-party components and their licensing/copyright information, is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/terraform-btp-role-collections).
