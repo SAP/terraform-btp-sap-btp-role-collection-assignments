@@ -96,14 +96,14 @@ Each assignment entry supports an optional `origin_id` that overrides `default_o
 
 | Name | Version |
 | ---- | ------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.14 |
-| <a name="requirement_btp"></a> [btp](#requirement\_btp) | ~>1.21.3 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.14 |
+| <a name="requirement_btp"></a> [btp](#requirement\_btp) | ~> 1.22.0 |
 
 ## Providers
 
 | Name | Version |
 | ---- | ------- |
-| <a name="provider_btp"></a> [btp](#provider\_btp) | 1.21.3 |
+| <a name="provider_btp"></a> [btp](#provider\_btp) | ~> 1.22.0 |
 
 ## Modules
 

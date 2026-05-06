@@ -56,7 +56,7 @@ module "rc_assignment" {
 | Name | Version |
 | ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.14 |
-| <a name="requirement_btp"></a> [btp](#requirement\_btp) | >=1.22.0 |
+| <a name="requirement_btp"></a> [btp](#requirement\_btp) | ~> 1.22.0 |
 
 ## Providers
 
@@ -66,7 +66,7 @@ No providers.
 
 | Name | Source | Version |
 | ---- | ------ | ------- |
-| <a name="module_rc_assignment"></a> [rc\_assignment](#module\_rc\_assignment) | ../../. | n/a |
+| <a name="module_rc_assignment"></a> [rc\_assignment](#module\_rc\_assignment) | ../.. | n/a |
 
 ## Resources
 
