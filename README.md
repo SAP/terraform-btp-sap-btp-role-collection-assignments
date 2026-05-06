@@ -95,14 +95,14 @@ Each assignment entry supports an optional `origin_id` that overrides `default_o
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.14 |
 | <a name="requirement_btp"></a> [btp](#requirement\_btp) | ~> 1.22.0 |
 
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_btp"></a> [btp](#provider\_btp) | ~> 1.22.0 |
 
 ## Modules
@@ -112,14 +112,14 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [btp_subaccount_role_collection_assignment.by_group](https://registry.terraform.io/providers/SAP/btp/latest/docs/resources/subaccount_role_collection_assignment) | resource |
 | [btp_subaccount_role_collection_assignment.by_user](https://registry.terraform.io/providers/SAP/btp/latest/docs/resources/subaccount_role_collection_assignment) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_default_origin_id"></a> [default\_origin\_id](#input\_default\_origin\_id) | The default origin ID used when no specific origin ID is provided in a role collection assignment. | `string` | `null` | no |
 | <a name="input_role_collection_assignments_by_group"></a> [role\_collection\_assignments\_by\_group](#input\_role\_collection\_assignments\_by\_group) | List of role collection assignments. Each entry defines a role collection and the groups to assign to it. | <pre>list(object({<br/>    role_collection_name = string<br/>    origin_id            = optional(string)<br/>    group_names          = list(string)<br/>  }))</pre> | `[]` | no |
 | <a name="input_role_collection_assignments_by_user"></a> [role\_collection\_assignments\_by\_user](#input\_role\_collection\_assignments\_by\_user) | List of role collection assignments. Each entry defines a role collection and the users to assign to it. | <pre>list(object({<br/>    role_collection_name = string<br/>    origin_id            = optional(string)<br/>    user_names           = list(string)<br/>  }))</pre> | `[]` | no |
@@ -128,7 +128,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_assignments_by_group_count"></a> [assignments\_by\_group\_count](#output\_assignments\_by\_group\_count) | The number of role collection assignments that have been made using the group attribute. |
 | <a name="output_assignments_by_group_keys"></a> [assignments\_by\_group\_keys](#output\_assignments\_by\_group\_keys) | The list of keys identifying each role collection assignment that have been made using the group attribute. |
 | <a name="output_assignments_by_user_count"></a> [assignments\_by\_user\_count](#output\_assignments\_by\_user\_count) | The number of role collection assignments that have been made using the user attribute. |
