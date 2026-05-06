@@ -27,16 +27,31 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v4
-        with:
-          terraform_wrapper: false
 
-      - name: Render terraform docs inside the README.md and push changes back to PR
-          branch
-        uses: terraform-docs/gh-actions@v1.4.1
-        with:
-          working-dir: .
-          output-file: README.md
-          config-file: .terraform-docs.yml
-          fail-on-diff: true
+
+      # Replaced terraform-docs/gh-actions (unmaintained) with direct CLI install
+      # - name: Render terraform docs inside the README.md and push changes back to PR
+      #     branch
+      #   uses: terraform-docs/gh-actions@v1.4.1
+      #   with:
+      #     working-dir: .
+      #     output-file: README.md
+      #     config-file: .terraform-docs.yml
+      #     fail-on-diff: true
+
+      - name: Install terraform-docs
+        run: |
+          curl -Lo /tmp/terraform-docs.tar.gz \
+            https://github.com/terraform-docs/terraform-docs/releases/download/v0.23.0/terraform-docs-v0.23.0-Linux-amd64.tar.gz
+          tar -xzf /tmp/terraform-docs.tar.gz -C /usr/local/bin terraform-docs
+          terraform-docs --version
+
+      - name: Generate Terraform documentation
+        run: terraform-docs --config .terraform-docs.yml --output-file README.md .
+
+      - name: Fail if documentation is out of date
+        run: |
+          if ! git diff --exit-code README.md; then
+            echo "Documentation is out of date. Run 'terraform-docs --config .terraform-docs.yml --output-file README.md .' and commit the result."
+            exit 1
+          fi
