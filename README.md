@@ -1,4 +1,4 @@
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP/terraform-module-repository-template)](https://api.reuse.software/info/github.com/SAP/terraform-module-repository-template)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/terraform-btp-sap-btp-role-collection-assignments)](https://api.reuse.software/info/github.com/SAP/terraform-btp-sap-btp-role-collection-assignments)
 
 # Terraform Module for Role Collection Assignments on SAP BTP
 
@@ -90,6 +90,26 @@ Each assignment entry supports an optional `origin_id` that overrides `default_o
 
 - [Role collection assignment by group](examples/role-collection-assignment-by-group)
 - [Role collection assignment by user](examples/role-collection-assignment-by-user)
+
+## Support, Feedback, Contributing
+
+❓ - If you have a *question* you can ask it here in [GitHub Discussions](https://github.com/SAP/terraform-btp-sap-btp-role-collection-assignments/discussions/).
+
+🐞 - If you find a bug, feel free to create a [bug report](https://github.com/SAP/terraform-btp-sap-btp-role-collection-assignments/issues/new?assignees=&labels=bug%2Cneeds-triage&projects=&template=bug_report.yml&title=%5BBUG%5D).
+
+💡 - If you have an idea for improvement or a feature request, please open a [feature request](https://github.com/SAP/terraform-btp-sap-btp-role-collection-assignments/issues/new?assignees=&labels=enhancement%2Cneeds-triage&projects=&template=feature_request.yml&title=%5BFEATURE%5D).
+
+For more information about how to contribute, the project structure, and additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
+
+> **Note**: We take Terraform's security and our users' trust seriously. If you believe you have found a security issue in the Terraform Module for Role Collection Assignments on SAP BTP, please responsibly disclose it. You find more details on the process in [our security policy](https://github.com/SAP/terraform-btp-sap-btp-role-collection-assignments/security/policy).
+
+## Code of Conduct
+
+Members, contributors, and leaders pledge to make participation in our community a harassment-free experience. By participating in this project, you agree to always abide by its [Code of Conduct](https://github.com/SAP/.github/blob/main/CODE_OF_CONDUCT.md).
+
+## Licensing
+
+Copyright 2026 SAP SE or an SAP affiliate company and `terraform-btp-sap-btp-role-collection-assignments` contributors. See our [LICENSE](LICENSE) for copyright and license information. Detailed information, including third-party components and their licensing/copyright information, is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/).
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
