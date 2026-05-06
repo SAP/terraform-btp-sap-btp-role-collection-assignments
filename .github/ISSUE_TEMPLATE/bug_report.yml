@@ -14,7 +14,7 @@ body:
     attributes:
       label: What version of the Terraform provider are you using?
       description: What version of the Terraform provider for SAP BTP are you using?
-      placeholder: 1.20.0
+      placeholder: 1.22.0
     validations:
       required: true
   - type: input
@@ -24,21 +24,21 @@ body:
       placeholder: 0.1.0-beta
     validations:
       required: true
-  # - type: dropdown
-  #   id: tool-used
-  #   attributes:
-  #     label: tool-used
-  #     description: Which Tool/CLI are you using?
-  #     options:
-  #       - Terraform CLI
-  #       - OpenTofu CLI
+  - type: dropdown
+    id: tool-used
+    attributes:
+      label: tool-used
+      description: Which Tool/CLI are you using?
+      options:
+        - Terraform CLI
+        - OpenTofu CLI
     validations:
       required: true
   - type: input
     attributes:
       label: What version of the Terraform are you using?
       description: What version of the Terraform CLI are you using?
-      placeholder: 1.14.5
+      placeholder: 1.15.1
     validations:
       required: true
   - type: dropdown

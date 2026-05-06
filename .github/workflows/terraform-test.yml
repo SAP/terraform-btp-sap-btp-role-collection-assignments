@@ -1,7 +1,7 @@
 name: Terraform Test
 
-# This GitHub action will run on pull requests and pushes on main branch. 
-# It will run terraform validate and terraform test. 
+# This GitHub action will run on pull requests and pushes on main branch.
+# It will run terraform validate and terraform test.
 # If there are any errors, it will fail the action and ask the contributor to fix the errors.
 
 on:
@@ -16,19 +16,22 @@ on:
 jobs:
   terraform-test:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: latest
           terraform_wrapper: false
 
+      - name: Terraform Init
+        run: terraform init
+
       - name: Terraform Validate
         run: terraform validate
-      
+
       - name: Terraform Test
         run: terraform test
