@@ -34,8 +34,8 @@ This module eliminates that boilerplate. You provide a list of role collections,
 
 ```terraform
 module "role_collection_assignment" {
-  source  = "lechnerc77/rolecollection/btp"
-  version = "1.0.0"
+  source  = "SAP/rolecollection/btp"
+  version = "0.1.0"
 
   subaccount_id     = "5cb53b0d-a5fc-44db-955e-9a72488fed74"
   default_origin_id = "sap.default"
@@ -62,8 +62,8 @@ module "role_collection_assignment" {
 
 ```terraform
 module "role_collection_assignment" {
-  source  = "lechnerc77/rolecollection/btp"
-  version = "1.0.0"
+  source  = "SAP/rolecollection/btp"
+  version = "0.1.0"
 
   subaccount_id     = "5cb53b0d-a5fc-44db-955e-9a72488fed74"
   default_origin_id = "sap.default"
