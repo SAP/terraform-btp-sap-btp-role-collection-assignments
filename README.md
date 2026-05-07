@@ -1,4 +1,6 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP/terraform-btp-sap-btp-role-collection-assignments)](https://api.reuse.software/info/github.com/SAP/terraform-btp-sap-btp-role-collection-assignments)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/12772/badge)](https://www.bestpractices.dev/projects/12772)
+[![CodeQL](https://github.com/SAP/terraform-btp-sap-btp-role-collection-assignments/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/SAP/terraform-btp-sap-btp-role-collection-assignments/actions/workflows/github-code-scanning/codeql)
 
 # Terraform Module for Role Collection Assignments on SAP BTP
 
