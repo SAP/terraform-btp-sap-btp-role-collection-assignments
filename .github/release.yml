@@ -3,8 +3,6 @@ changelog:
     labels:
       - ignore-for-release
       - github_actions
-    authors:
-      - dependabot
   categories:
     - title: Breaking Changes 🛠
       labels:
