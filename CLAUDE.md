@@ -42,6 +42,19 @@ cd examples/role-collection-assignment-by-user && terraform init && terraform pl
 ├── outputs.tf                           # assignment counts and keys per type
 ├── versions.tf                          # provider/terraform version constraints
 ├── README.md                            # Auto-generated via terraform-docs (do not edit between TF_DOCS markers)
+├── .github/
+│   ├── release.yml                      # Release notes configuration template
+│   ├── dependabot.yml                   # Dependabot configuration
+│   ├── ISSUE_TEMPLATE/                  # Issue templates (bug report, feature request)
+│   ├── PULL_REQUEST_TEMPLATE.md         # PR template
+│   └── workflows/
+│       ├── release.yml                  # Creates GitHub release on tag push (v*.*.*)
+│       ├── terraform-test.yml           # Terraform validate + test + SonarCloud
+│       ├── terraform-format-check.yml   # Terraform fmt check
+│       ├── terraform-docu-check.yml     # Terraform-docs generation check
+│       ├── reuse-check.yml              # REUSE license compliance
+│       ├── semantic-pr.yml              # Conventional commit PR title check
+│       └── ...                          # Issue/PR automation workflows
 ├── examples/
 │   ├── role-collection-assignment-by-group/   # Example: group-based assignments
 │   │   ├── main.tf, variables.tf, outputs.tf, versions.tf, providers.tf

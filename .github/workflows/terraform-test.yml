@@ -12,6 +12,10 @@ on:
       - synchronize
       - ready_for_review
   workflow_dispatch:
+  workflow_call:
+    secrets:
+      SONAR_TOKEN:
+        required: true
 
 permissions:
   contents: read
