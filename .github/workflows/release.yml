@@ -1,0 +1,38 @@
+name: Release Module Version
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+
+permissions:
+  contents: write
+
+jobs:
+  terraform-test:
+    uses: ./.github/workflows/terraform-test.yml
+
+  terraform-format-check:
+    uses: ./.github/workflows/terraform-format-check.yml
+
+  terraform-docu-check:
+    uses: ./.github/workflows/terraform-docu-check.yml
+
+  release:
+    needs:
+      - terraform-test
+      - terraform-format-check
+      - terraform-docu-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create release
+        uses: actions/github-script@v9
+        with:
+          script: |
+            await github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: context.ref.replace('refs/tags/', ''),
+              target_commitish: 'main',
+              generate_release_notes: true,
+            });
