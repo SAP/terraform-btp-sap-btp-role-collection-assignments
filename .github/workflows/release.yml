@@ -3,7 +3,7 @@ name: Release Module Version
 on:
   push:
     tags:
-      - "v[0-9]+.[0-9]+.[0-9]+"
+      - "v*.*.*"
 
 permissions:
   contents: write
@@ -11,12 +11,15 @@ permissions:
 jobs:
   terraform-test:
     uses: ./.github/workflows/terraform-test.yml
+    secrets: inherit
 
   terraform-format-check:
     uses: ./.github/workflows/terraform-format-check.yml
+    secrets: inherit
 
   terraform-docu-check:
     uses: ./.github/workflows/terraform-docu-check.yml
+    secrets: inherit
 
   release:
     needs:
