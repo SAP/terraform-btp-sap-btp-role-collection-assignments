@@ -1,0 +1,28 @@
+{
+	"name": "Terraform Module - BTP Role Collections",
+	"image": "mcr.microsoft.com/devcontainers/go:dev-1.26",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/terraform:1": {
+			"tflint": "none",
+			"terragrunt": "none"
+		},
+		"ghcr.io/robbert229/devcontainer-features/opentofu:1": {
+			"version": "1.12.1"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"HashiCorp.terraform"
+				]
+		},
+		"codespaces": {}
+	},
+	"postCreateCommand": "bash ./.devcontainer/scripts/install-tflint.sh",
+	"hostRequirements": {
+		"memory": "4gb"
+	},
+	"remoteUser": "vscode"
+}
