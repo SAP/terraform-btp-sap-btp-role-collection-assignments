@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A Terraform module that manages SAP BTP role collection assignments at the subaccount level. It accepts lists of role-collection-to-group and role-collection-to-user mappings and flattens them into individual `btp_subaccount_role_collection_assignment` resources using `for_each` with composite keys (`{role_collection}__{assignee}__{origin}`).
 
-**Provider:** SAP/btp ~> 1.22.0 | **Terraform:** >= 1.14
+**Provider:** SAP/btp >= 1.22.0 | **Terraform:** >= 1.14
 
 ## Skills
 

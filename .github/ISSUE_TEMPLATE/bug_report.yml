@@ -15,7 +15,7 @@ body:
     attributes:
       label: What version of the Terraform provider are you using?
       description: What version of the Terraform provider for SAP BTP are you using?
-      placeholder: 1.22.0
+      placeholder: 1.24.0
     validations:
       required: true
   - type: input
