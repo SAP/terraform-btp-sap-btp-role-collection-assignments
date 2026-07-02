@@ -119,13 +119,13 @@ Copyright 2026 SAP SE or an SAP affiliate company and `terraform-btp-sap-btp-rol
 | Name | Version |
 | ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.14 |
-| <a name="requirement_btp"></a> [btp](#requirement\_btp) | ~> 1.22.0 |
+| <a name="requirement_btp"></a> [btp](#requirement\_btp) | >= 1.22.0 |
 
 ## Providers
 
 | Name | Version |
 | ---- | ------- |
-| <a name="provider_btp"></a> [btp](#provider\_btp) | ~> 1.22.0 |
+| <a name="provider_btp"></a> [btp](#provider\_btp) | >= 1.22.0 |
 
 ## Modules
 
