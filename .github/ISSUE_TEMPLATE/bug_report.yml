@@ -22,7 +22,7 @@ body:
     attributes:
       label: What version of the Terraform module are you using?
       description: What version of the Terraform module for SAP BTP are you using?
-      placeholder: 0.1.0-beta
+      placeholder: 1.0.1
     validations:
       required: true
   - type: dropdown
@@ -39,7 +39,7 @@ body:
     attributes:
       label: What version of the Terraform are you using?
       description: What version of the Terraform CLI are you using?
-      placeholder: 1.15.1
+      placeholder: 1.15.6
     validations:
       required: true
   - type: dropdown
