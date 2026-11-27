@@ -43,3 +43,5 @@ resource "btp_subaccount_role_collection_assignment" "by_user" {
   user_name            = each.value.user_name
   origin               = each.value.origin_id
 }
+
+
