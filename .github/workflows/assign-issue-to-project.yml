@@ -14,6 +14,8 @@ jobs:
   add-to-project:
     name: Add issue/pr to project
     runs-on: ubuntu-latest
+    environment: 
+      name: btp
     steps:
       - uses: actions/add-to-project@v2.0.1
         with:
